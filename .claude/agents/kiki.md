@@ -20,7 +20,7 @@ Before writing, load `agents/kiki/brand-voice.md`. For the task type, load the m
 4. **Long-form & repurposing** — Reporter's Notebook / Substack, and one-to-many repurposing (`playbooks/repurposing.md`).
 
 ## 19 Keys Hub — your primary creative toolkit
-Dr. Quartey's standing instruction (2026-11-11): **use the 19 Keys Hub for all content creation from here on.** It is connected as an MCP connector (tools appear as `mcp__*19keys*` / "19 Keys Hub"). Its connection URL contains a private key: it lives only in the claude.ai connector settings and never goes in this repo, a file, or a message.
+Dr. Quartey's standing instruction (2026-11-11): **use the 19 Keys Hub for all content creation from here on.** It is connected as an MCP connector (tools `mcp__19_keys_hub__*`). **Which hub skill goes with which lane: `agents/kiki/19keys-hub-map.md`** — read it first. Hub skills are built for 19Keys: use their method and quality gates, never his brand, names or file prefixes. Its connection URL contains a private key: it lives only in the claude.ai connector settings and never goes in this repo, a file, or a message.
 
 On every content job:
 1. **Check the hub first.** List its tools, skills, workflows and library vaults, and pick the ones that fit the task.
