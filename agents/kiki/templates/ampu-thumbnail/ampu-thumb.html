@@ -1,0 +1,80 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Bebas;src:url(bebas.woff2)}
+@font-face{font-family:Oswald;font-weight:700;src:url(oswald700.woff2)}
+@font-face{font-family:Oswald;font-weight:400;src:url(oswald400.woff2)}
+:root{
+  --gold:#F5C542; --gold-deep:#B8860B; --gold-hi:#FFE9A3; --ink:#07070A; --red:#E0262B;
+  /* ===== EPISODE SLOTS ===== */
+  --date:"WED · NOV 11"; --time:"4–6 PM PT";
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1280px;height:720px;background:var(--ink);overflow:hidden}
+.stage{position:relative;width:1280px;height:720px;overflow:hidden;font-family:Bebas,sans-serif}
+
+/* background: his real Hollywood rooftop, crushed to black + gold */
+.bg{position:absolute;inset:0;background:url(bg.jpg) center/cover;filter:grayscale(1) contrast(1.15);opacity:.55}
+.tint{position:absolute;inset:0;background:
+  radial-gradient(ellipse 520px 560px at 330px 330px, rgba(245,197,66,.42), rgba(245,197,66,0) 70%),
+  linear-gradient(90deg, rgba(7,7,10,.25) 0%, rgba(7,7,10,.55) 45%, rgba(7,7,10,.96) 62%, #07070A 100%);
+  mix-blend-mode:normal}
+.rays{position:absolute;left:-200px;top:-200px;width:1100px;height:1100px;
+  background:repeating-conic-gradient(from 0deg at 530px 520px, rgba(245,197,66,.10) 0 4deg, transparent 4deg 13deg);
+  -webkit-mask:radial-gradient(circle at 530px 520px, #000 0 30%, transparent 62%)}
+.goldbar{position:absolute;left:0;right:0;bottom:0;height:10px;background:linear-gradient(90deg,var(--gold-deep),var(--gold-hi),var(--gold),var(--gold-deep))}
+
+/* host */
+.host{position:absolute;left:-58px;top:22px;width:900px;
+  filter:drop-shadow(0 0 2px rgba(255,233,163,.9)) drop-shadow(0 0 22px rgba(245,197,66,.55)) drop-shadow(18px 24px 30px rgba(0,0,0,.7))}
+
+/* title */
+.title{position:absolute;right:40px;top:30px;width:640px;text-align:right;line-height:.82}
+.t1{white-space:nowrap;font-size:86px;color:#fff;letter-spacing:1px;text-shadow:0 4px 0 rgba(0,0,0,.6)}
+.t1 .star{color:var(--gold);font-size:70px;vertical-align:8px;margin:0 4px}
+.t2{font-size:228px;letter-spacing:2px;
+  background:linear-gradient(180deg,var(--gold-hi) 0%,var(--gold) 38%,var(--gold-deep) 78%,#7a5a08 100%);
+  -webkit-background-clip:text;color:transparent;
+  filter:drop-shadow(0 6px 0 #000) drop-shadow(0 0 26px rgba(245,197,66,.35))}
+.with{margin-top:4px;font-family:Oswald;font-weight:700;font-size:23px;letter-spacing:3px;color:var(--ink);
+  display:inline-block;background:var(--gold);padding:5px 14px 6px;text-transform:uppercase}
+
+/* live badge */
+.live{position:absolute;left:30px;top:28px;display:flex;align-items:center;gap:10px}
+.pill{background:var(--red);color:#fff;font-size:40px;padding:3px 16px 0;border-radius:6px;display:flex;align-items:center;gap:10px;box-shadow:0 4px 0 #000}
+.dot{width:16px;height:16px;border-radius:50%;background:#fff}
+.when{font-family:Oswald;font-weight:700;color:#fff;font-size:22px;line-height:1.05;letter-spacing:1px;text-shadow:0 2px 6px #000}
+.when b{color:var(--gold);display:block;font-size:26px}
+.when b::before{content:var(--date)} .when span::before{content:var(--time)}
+
+/* guests */
+.guests{position:absolute;right:48px;bottom:40px;display:flex;gap:14px}
+.g{width:126px;text-align:center}.g .ph{margin:0 auto}
+.g .ph{width:118px;height:118px;border-radius:50%;border:5px solid var(--gold);background:center/cover;
+  box-shadow:0 0 0 3px #000,0 0 22px rgba(245,197,66,.5),0 10px 20px rgba(0,0,0,.8)}
+.g .nm{margin-top:8px;color:#fff;font-size:25px;white-space:nowrap;letter-spacing:1px;line-height:.9;text-shadow:0 2px 0 #000}
+.onair{position:absolute;right:48px;bottom:236px;font-family:Oswald;font-weight:700;font-size:17px;letter-spacing:6px;color:var(--gold)}
+
+/* station */
+.station{position:absolute;left:30px;bottom:30px;font-size:34px;color:#fff;letter-spacing:1px;text-shadow:0 3px 8px #000}
+.station em{font-style:normal;color:var(--red)} .station i{font-style:normal;color:var(--gold);margin:0 8px}
+</style></head>
+<body><div class="stage">
+  <div class="bg"></div><div class="rays"></div><div class="tint"></div>
+  <img class="host" src="host_cut.png" alt="">
+  <div class="title">
+    <div class="t1">A MORE<span class="star">★</span>PERFECT</div>
+    <div class="t2">UNION</div>
+    <div class="with">with Dr. Nii-Quartelai Quartey</div>
+  </div>
+  <div class="live"><div class="pill"><span class="dot"></span>LIVE</div><div class="when"><b></b><span></span></div></div>
+  <div class="onair">TODAY'S CONVERSATION</div>
+  <div class="guests">
+    <div class="g"><div class="ph" style="background-image:url(g_james.png)"></div><div class="nm">DR. ROBERT<br>JAMES</div></div>
+    <div class="g"><div class="ph" style="background-image:url(g_shropshire.png)"></div><div class="nm">ADRIANNE<br>SHROPSHIRE</div></div>
+    <div class="g"><div class="ph" style="background-image:url(g_reynolds.png)"></div><div class="nm">AL<br>REYNOLDS</div></div>
+    <div class="g"><div class="ph" style="background-image:url(g_castleberry.png)"></div><div class="nm" style="font-size:22px;letter-spacing:0;margin-left:-20px;margin-right:-20px">ASHA CASTLEBERRY-<br>HERNANDEZ</div></div>
+  </div>
+  <div class="station"><em>KBLA</em> TALK 1580<i>|</i>YOUTUBE</div>
+  <div class="goldbar"></div>
+</div></body></html>
